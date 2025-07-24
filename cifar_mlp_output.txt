@@ -1,0 +1,89 @@
+#cifar_mlp output
+1st: 
+no. of layers:1
+no. of neurons: 10
+activation: softmax
+optimizer: adam
+metrics: accuracy
+loss: categorical_crossentropy
+no. of epochs: 10
+batch_size: 64
+test_acc : true
+test_loss : true 
+
+Epoch 1/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 2s 2ms/step - accuracy: 0.2063 - loss: 122.5446    
+Epoch 2/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 2ms/step - accuracy: 0.2569 - loss: 68.9384  
+Epoch 3/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 2ms/step - accuracy: 0.2611 - loss: 70.2983  
+......
+Epoch 10/10
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 2ms/step - accuracy: 0.2845 - loss: 63.9647  
+313/313 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2775 - loss: 41.9589   
+accuracy: 0.2800999879837036,loss: 42.05925369262695    
+
+2nd: 
+validation_split=0.2
+history.history['accuracy']: true
+history.history['val_accuracy']: true
+epochs vs accuracy on train and validation data: true
+no. of epochs: 10
+
+Epoch 1/10
+625/625 ━━━━━━━━━━━━━━━━━━━━ 2s 3ms/step - accuracy: 0.1064 - loss: 43.9044 - val_accuracy: 0.0952 - val_loss: 2.3031
+Epoch 2/10
+625/625 ━━━━━━━━━━━━━━━━━━━━ 2s 3ms/step - accuracy: 0.1002 - loss: 2.3026 - val_accuracy: 0.0952 - val_loss: 2.3031
+Epoch 3/10
+625/625 ━━━━━━━━━━━━━━━━━━━━ 2s 2ms/step - accuracy: 0.1044 - loss: 2.3024 - val_accuracy: 0.1016 - val_loss: 2.3030
+.....
+Epoch 10/10
+625/625 ━━━━━━━━━━━━━━━━━━━━ 2s 2ms/step - accuracy: 0.0975 - loss: 2.3027 - val_accuracy: 0.0952 - val_loss: 2.3031
+accuracy: 0.10000000149011612,loss: 2.3026206493377686   
+
+3rd:
+epochs vs loss on train and validation data: true
+no. of epochs: 30
+
+Epoch 1/30
+782/782 ━━━━━━━━━━━━━━━━━━━━ 2s 2ms/step - accuracy: 0.2038 - loss: 120.8287 - val_accuracy: 0.2110 - val_loss: 90.2776
+Epoch 2/30
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2578 - loss: 65.6389 - val_accuracy: 0.2074 - val_loss: 114.4606
+Epoch 3/30
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2617 - loss: 69.1838 - val_accuracy: 0.1896 - val_loss: 80.3105
+.....
+Epoch 30/30
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2817 - loss: 66.1479 - val_accuracy: 0.2586 - val_loss: 77.8335
+accuracy: 0.25859999656677246,loss: 77.83348846435547 
+
+4th:
+validation_data=(X_test, y_test)
+no. of epochs: 100
+
+Epoch 1/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 2s 1ms/step - accuracy: 0.2079 - loss: 119.5669 - val_accuracy: 0.2286 - val_loss: 60.7952
+Epoch 2/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2537 - loss: 69.5666 - val_accuracy: 0.2244 - val_loss: 82.3477
+Epoch 3/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2657 - loss: 66.1383 - val_accuracy: 0.2186 - val_loss: 82.5950
+.....
+Epoch 100/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 1s 1ms/step - accuracy: 0.2988 - loss: 65.1062 - val_accuracy: 0.2364 - val_loss: 86.9198
+accuracy: 0.23639999330043793,loss: 86.91975402832031   
+
+5th: 
+no. of epochs: 100
+no of layers : 6 (1024,512,256,128,64,10)
+activation : relu , SoftMax
+
+Epoch 1/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 25s 31ms/step - accuracy: 0.1936 - loss: 51.5381 - val_accuracy: 0.3134 - val_loss: 1.9628
+Epoch 2/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 25s 32ms/step - accuracy: 0.3316 - loss: 1.9169 - val_accuracy: 0.3117 - val_loss: 1.9377
+Epoch 3/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 27s 35ms/step - accuracy: 0.3639 - loss: 1.8067 - val_accuracy: 0.3338 - val_loss: 1.8389
+.....
+Epoch 100/100
+782/782 ━━━━━━━━━━━━━━━━━━━━ 25s 32ms/step - accuracy: 0.6591 - loss: 0.9623 - val_accuracy: 0.4812 - val_loss: 1.7906
+accuracy: 0.4812000095844269,loss: 1.7906432151794434
+
