@@ -104,9 +104,8 @@ High loss suggests the model is still struggling to learn features properly.
 CIFAR-10 is a high-dimensional image dataset, and MLPs aren’t great for spatial data.
 
 4th:
-Increasing epochs doesn’t help — training and validation both saturate early.
-Possibly overfitting to noise, or learning not progressing due to data scaling or model design issues.
-Loss scale is off, suggesting output logits may be exploding or input scaling is poor.
+Training stops improving early, even with more epochs.
+The model is overfitting to random noise in the data
 
 5th:
 Huge improvement.
