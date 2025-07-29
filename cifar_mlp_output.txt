@@ -87,3 +87,29 @@ Epoch 100/100
 782/782 ━━━━━━━━━━━━━━━━━━━━ 25s 32ms/step - accuracy: 0.6591 - loss: 0.9623 - val_accuracy: 0.4812 - val_loss: 1.7906
 accuracy: 0.4812000095844269,loss: 1.7906432151794434
 
+Analysis:
+1st:
+Very shallow network → cannot capture the complexity of CIFAR-10.
+Softmax alone (without hidden layers) reduces it to a linear classifier.
+High loss implies poor learning capacity.
+
+2nd:
+Indicates training not happening at all.
+Loss close to log(10) (~2.30), meaning the model is predicting uniformly across all 10 classes.
+Could be due to vanishing gradients or bad initialization.
+
+3rd:
+You're making progress with deeper MLP, but still insufficient.
+High loss suggests the model is still struggling to learn features properly.
+CIFAR-10 is a high-dimensional image dataset, and MLPs aren’t great for spatial data.
+
+4th:
+Increasing epochs doesn’t help — training and validation both saturate early.
+Possibly overfitting to noise, or learning not progressing due to data scaling or model design issues.
+Loss scale is off, suggesting output logits may be exploding or input scaling is poor.
+
+5th:
+Huge improvement.
+Gap between training and validation → overfitting
+But model is learning well; losses are reasonable and comparable
+
