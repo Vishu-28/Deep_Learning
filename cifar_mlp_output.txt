@@ -42,7 +42,7 @@ Epoch 10/10
 accuracy: 0.10000000149011612,loss: 2.3026206493377686   
 
 3rd:
-epochs vs loss on train and validation data: true
+epochs vs accuracy on train and validation data: true
 no. of epochs: 30
 
 Epoch 1/30
