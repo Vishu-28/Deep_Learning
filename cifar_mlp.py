@@ -31,8 +31,8 @@ model.compile(optimizer='adam',loss= 'categorical_crossentropy',metrics=['accura
 #history = model.fit(x_train,y_train,epochs=10,batch_size=64, validation_split = 0.2)
 #history = model.fit(x_train,y_train,epochs=30,batch_size=64, validation_data = (x_test,y_test))
 history = model.fit(x_train,y_train,epochs=100,batch_size=64, validation_data = (x_test,y_test))
-print(history.history.items())
-print(history.history.keys())
+#print(history.history.items())
+#print(history.history.keys())
 
 #evaluate
 loss, accuracy = model.evaluate(x_test,y_test)
